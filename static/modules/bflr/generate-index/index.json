@@ -1,0 +1,59 @@
+{
+  "default_mapping": {
+    "enabled": true,
+    "dynamic": true,
+    "properties": {
+      "collection": {
+        "enabled": true,
+        "dynamic": false,
+        "fields": [
+          {
+            "name": "collection",
+            "type": "text",
+            "store": true,
+            "index": true,
+            "include_term_vectors": true,
+            "include_in_all": true
+          }
+        ]
+      },
+      "title": {
+        "enabled": true,
+        "dynamic": false,
+        "fields": [
+          {
+            "name": "title",
+            "type": "text",
+            "store": true,
+            "index": true,
+            "include_term_vectors": true,
+            "include_in_all": true
+          }
+        ]
+      },
+      "siglum": {
+        "enabled": true,
+        "dynamic": false,
+        "fields": [
+          {
+            "name": "siglum",
+            "type": "text",
+            "store": true,
+            "index": true,
+            "include_term_vectors": true,
+            "include_in_all": true
+          }
+        ]
+      }
+    }
+  },
+  "type_field": "_type",
+  "default_type": "_default",
+  "default_analyzer": "standard",
+  "default_datetime_parser": "dateTimeOptional",
+  "default_field": "_all",
+  "store_dynamic": true,
+  "index_dynamic": true,
+  "docvalues_dynamic": true,
+  "analysis": {}
+}

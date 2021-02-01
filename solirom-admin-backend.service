@@ -1,0 +1,17 @@
+[Unit]
+Description=Solirom admin site
+After=syslog.target
+After=network.target
+
+[Service]
+RestartSec=2s
+Type=simple
+User=angel
+Group=angel
+WorkingDirectory=/home/angel/solirom-admin-backend/
+ExecStart=/home/angel/solirom-admin-backend/solirom-admin-backend
+Restart=always
+#Environment=USER=git HOME=/home/git GITEA_WORK_DIR=/var/lib/gitea
+
+[Install]
+WantedBy=multi-user.target

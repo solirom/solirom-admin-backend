@@ -1,0 +1,271 @@
+ <html xmlns="http://www.w3.org/1999/xhtml">
+	<head> 
+	    <title>Administrare platformă Solirom</title>
+		<meta charset="utf-8"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+		<meta name="description" content="Administrare platformă Solirom"/>
+		<meta name="author" content="Claudius Teodorescu"/>		
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+		<script src="/static/js/index.js" defer="true">/**/</script> 
+	</head>
+	<body>
+	    <div id="content">
+			<div id="logo-container">
+				<img id="logo" src="/static/images/ar-logo.gif" alt="Academia Romană"/>
+			</div>	    
+			<div id="summary-container">
+			    <h2>ACADEMIA ROMÂNĂ</h2>
+				<h4>Secția de filologie și literatură</h4>
+			</div>		
+            <nav id="menu">
+              <ul class="mainmenu">
+                <li>
+                        <a href="javascript:solirom.activateGallery('#ontology-gallery')">Ontologie</a>
+                    </li>
+                <li>
+                        <a href="javascript:solirom.activateGallery('#lexical-index-gallery')">Index lexical</a>
+                    </li>                    
+                <li>
+                        <a href="javascript:solirom.activateGallery('#dictionary-corpus-gallery')">Corpus de dicționare</a>
+                    </li>                    
+                <li>
+                        <a href="javascript:solirom.activateGallery('#text-corpus-gallery')">Corpus de texte</a>
+                    </li>
+                <li>
+                        <a href="javascript:solirom.activateGallery('#citations-corpus-gallery')">Corpus de citate</a>
+                    </li>                    
+                    
+                <li>
+                        <a href="javascript:solirom.activateGallery('#bflr-gallery')">Bibliografia filologică și lingvistică românească</a>
+                    </li>
+                <li>
+                        <a href="javascript:solirom.activateGallery('#bfls-gallery')">BFLS</a>
+                    </li>
+                <li>
+                        <a href="javascript:solirom.activateGallery('#terminologies-gallery')">Terminologii</a>
+                    </li>
+                <li>
+                        <a href="javascript:solirom.activateGallery('#formal-grammars-gallery')">Gramatici formale</a>
+                    </li>                   
+                    
+                <li>
+                        <a href="javascript:solirom.activateGallery('#researcher-gallery')">Colțul cercetătorului</a>
+                    </li>                    
+              </ul>
+            </nav>    		
+    		<div id="gallery">
+    		    <div id="ontology-gallery" class="content">
+    		        <h2>Ontologie pentru dicționarele academice</h2>
+    		        <div>
+                		<div class="button">
+                            <span>Limbi</span>
+                        </div>
+                		<div class="button">
+                            <span>Caractere speciale</span>
+                        </div>
+                		<div class="button">
+                            <span>Tipuri de etimologii</span>
+                        </div>
+                		<div class="button">
+                            <span>Tipuri de note etimologice</span>
+                        </div>
+                		<div class="button">
+                            <span>Părți de vorbire</span>
+                        </div>
+                		<div class="button">
+                            <span>Tipuri de indicații de folosire</span>
+                        </div>
+                		<div class="button">
+                            <span>Domenii ale indicațiilor de folosire</span>
+                        </div>
+                		<div class="button">
+                            <span>Tipuri de unități semantice subsumate</span>
+                        </div>
+                		<div class="button">
+                            <span>Administrare utilizatori</span>
+                        </div>            		
+            		</div>
+        		</div>    		
+    		    <div id="lexical-index-gallery" class="content">
+    		        <h2>Indexul lexical al limbii române</h2>
+    		        <div>    		    
+                		<div class="button">
+                            <span>Redactare intrări</span>
+                        </div>                        
+                		<div class="button">
+                            <span>Administrare intrări</span>
+                        </div>
+                    </div> 
+        		</div>        		
+        		
+    		    <div id="dictionary-corpus-gallery" class="content">
+    		        <div>
+    		            <h2>Dicționarul limbii române</h2>
+                		<div class="button" onclick="solirom.openInNewTab('https://docs.google.com/document/d/e/2PACX-1vRzqXsPabtZlt8DTkm-4XPYrRvOveGu6B-l3MhK16ucGzyXuNDzfw-WcpWNEV5daZRZ_fGaW2NzorQ2/pub')">
+                            <span>Îndrumar pentru instalarea Oxygen-ului și a plugin-urilor</span>
+                        </div>
+                		<div class="button" onclick="solirom.openInNewTab('https://docs.google.com/document/d/e/2PACX-1vQ9WXSLDmqWHTppMtOJZ2mCxg0NC1rPq8D9096XE85MnW_5ojh3BmryWQHUX_LuCN0FzftIVieN5pcp/pub')">
+                            <span>Îndrumar pentru redactarea DLRI-ului</span>
+                        </div>
+        		        <div class="button" onclick="solirom.openInNewTab('modules/dlr/edit/index.html')">
+                            <span>Redactare intrări</span>
+                        </div>
+                		<div class="button">
+                            <span>Administrare intrări</span>
+                        </div>
+                	</div>
+    		        <div>
+    		            <h2>Dicționarul explicativ al limbii române</h2>
+        		        <div class="button">
+                            <span>Redactare intrări</span>
+                        </div>
+                		<div class="button">
+                            <span>Administrare intrări</span>
+                        </div>
+                    </div>                		
+    		        <div>
+    		            <h2>Dicționarul etimologic al limbii române</h2>
+        		        <div class="button">
+                            <span>Redactare intrări</span>
+                        </div>
+                		<div class="button">
+                            <span>Administrare intrări</span>
+                        </div>
+                    </div> 
+        		</div>
+    		    <div id="text-corpus-gallery" class="content">
+    		        <div>
+    		            <h2>Corpus de texte</h2>
+        		        <div class="button">
+                            <span>Redactare intrări</span>
+                        </div>
+                		<div class="button">
+                            <span>Administrare intrări</span>
+                        </div>
+                    </div> 
+        		</div>
+    		    <div id="citations-corpus-gallery" class="content">
+    		        <div>
+    		            <h2>Corpus de citate</h2>
+                		<div class="button" onclick="solirom.openInNewTab('modules/citations/index.html')">
+                            <span>Editare citate</span>
+                        </div>                        
+                		<div class="button" onclick="solirom.openInNewTab('modules/sigla/index.html')">
+                            <span>Siglar digital</span>
+                        </div>
+                		<div class="button" onclick="solirom.openInNewTab('modules/citations-search/index.html')">
+                            <span>Căutare citate</span>
+                        </div>
+                    </div> 
+        		</div>        		
+    		    <div id="bflr-gallery" class="content">
+    		        <h2>Bibliografia filologică și lingvistică românească</h2>
+    		        <div>    		    
+                		<div class="button" onclick="solirom.openInNewTab('modules/bflr/index.html')">
+                            <span>Redactare intrări</span>
+                        </div>                        
+                		<div class="button">
+                            <span>Administrare intrări</span>
+                        </div>
+                    </div> 
+        		</div>
+    		    <div id="bfls-gallery" class="content">
+    		        <h2>Bibliografie filologică și lingvistică străină</h2>
+    		        <div>
+                  <h3>Limba asturiană</h3>
+                  <ul>
+                    <li>
+                      <a href="https://mas.lne.es/diccionario/">Dicționarul limbii asturiene</a>
+                    </li>
+                  </ul>
+                  <h3>Limba catalană</h3>
+                  <ul>
+                    <li>
+                      <a href="https://dcvb.iec.cat/">Dicționarul limbii catalane</a>
+                    </li>
+                  </ul>
+                  <h3>Limba franceză</h3>
+                  <ul>
+                    <li>
+                      <a href="https://dictionnaire-academie.fr">Dictionnaire de l’Académie française</a>
+                    </li>
+                    <li>
+                      <a href="http://atilf.fr/spip.php?rubrique76">Le rayon des dictionnaires</a> – colecţie de 11 dicţionare informatizate franceze, din secolul al XVI-lea pînă în secolul al XX-lea.
+                    </li>
+                    <li>
+                      <a href="https://apps.atilf.fr/lecteurFEW/index.php/page/view">Französisches Etymologisches Wörterbuch (FEW)</a>
+                    </li>                    
+                  </ul>
+                  <h3>Limba galiciană medievală</h3>
+                  <ul>
+                    <li>
+                      <a href="http://sli.uvigo.es/DDGM/index.php">Dicționarul dicționarelor limbii galiciene medievale (corpus)</a>
+                    </li>
+                  </ul>
+                  <h3>Limba germană</h3>
+                  <ul>
+                    <li>
+                      <a href="http://germazope.uni-trier.de/Projects/WBB/">Das Wörterbuchnetz</a> – reţea de 24 dicţionare de limba germană, creată la universitatea Trier din Germania.
+                    </li>                      
+                  </ul> 
+                  <h3>Limba italiană</h3>
+                  <ul>
+                    <li>
+                      <a href="http://lei-digitale.org">Lessico etimologico italiano</a>
+                    </li>                      
+                  </ul>
+                  <h3>Limba latină</h3>
+                  <ul>
+                    <li>
+                      <a href="https://thesaurus.badw.de/en/tll-digital/tll-open-access.html">Thesaurus linguae Latinae (TLL)</a>
+                    </li>                      
+                  </ul>
+                  <h3>Limba lituaniană</h3>
+                  <ul>
+                    <li>
+                      <a href="http://lki.lt/skaitmeniniai-lietuviu-kalbos-istekliai/">Resurse lingvistice digitale</a> – resurse digitale în limba lituaniană, gestionate de Institutul Limbii Lituaniene, disponibile pe internet, cu acces liber.
+                    </li>
+                    <li>
+                      <a href="http://lkiiis.lki.lt">Sistemul informațional al resurselor lingvistice lituaniene</a>
+                    </li>
+                    <li>
+                      <a href="http://www.lkz.lt/">Dicționarul digitizat al limbii lituaniene</a> – 20 volume, 22.000 p., cca 236.000 intrări, prima fasciculă - 1924, vol. I - 1941, vol. XX - 2002, prima ediția electronică - 2005, actualizat în 2008 și 2017.
+                    </li>                                        
+                  </ul>                                   
+                  <h3>Limba spaniolă</h3>
+                  <ul>
+                    <li>
+                      <a href="http://buscon.rae.es/ntlle/SrvltGUILoginNtlle">Nuevo tesoro lexicográfico de la lengua española</a> – bază de date cuprinzînd versiunile facsimilate ale tuturor dicționarelor editate și publicate de Real Academia Espagnola.
+                    </li>
+                  </ul>
+                </div> 
+        		</div> 
+    		    <div id="terminologies-gallery" class="content">
+    		        <h2>Terminologii</h2>
+        		</div> 
+    		    <div id="formal-grammars-gallery" class="content">
+    		        <h2>Gramatici formale</h2>
+        		</div>         		
+    		    <div id="researcher-gallery" class="content">
+    		        <h2>Colțul cercetătorului</h2>
+    		        <div>    		    
+        		        <div class="button" onclick="solirom.openInNewTab('modules/academic-score/index.html')">
+                            <span>Calculator punctaj academic</span>
+                    </div>
+                		<div class="button" onclick="solirom.openInNewTab('modules/grants/index.html')">
+                            <span>Granturi</span>
+                    </div>
+                		<div class="button">
+                            <span>Sesiuni de comunicări științifice</span>
+                    </div>                        
+                </div> 
+        		</div>         		
+    		</div>
+    	</div>
+        <div id="copyright-notice">
+            <h5>copyright © Academia Română</h5>
+        </div>    	
+	</body>
+</html>

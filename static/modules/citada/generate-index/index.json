@@ -1,0 +1,45 @@
+{
+  "default_mapping": {
+    "enabled": true,
+    "dynamic": true,
+    "properties": {
+      "a": {
+        "enabled": true,
+        "dynamic": false,
+        "fields": [
+          {
+            "name": "a",
+            "type": "text",
+            "store": true,
+            "index": true,
+            "include_term_vectors": true,
+            "include_in_all": true
+          }
+        ]
+      },
+      "sigla": {
+        "enabled": true,
+        "dynamic": false,
+        "fields": [
+          {
+            "name": "sigla",
+            "type": "text",
+            "store": true,
+            "index": true,
+            "include_term_vectors": true,
+            "include_in_all": true
+          }
+        ]
+      }
+    }
+  },
+  "type_field": "_type",
+  "default_type": "_default",
+  "default_analyzer": "standard",
+  "default_datetime_parser": "dateTimeOptional",
+  "default_field": "_all",
+  "store_dynamic": true,
+  "index_dynamic": true,
+  "docvalues_dynamic": true,
+  "analysis": {}
+}
