@@ -18,7 +18,7 @@ rm -rf "$json_files_dir" $index_path
 mkdir -p "$json_files_dir"
 
 # generate the json files for indexes
-time java -jar ~/workspace/repositories/git/solirom-xquery-service/bin/saxon9he.jar -s:"./input/" -xsl:"generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir"
 
 # create the index files
 time ~/workspace/repositories/go/bin/bleve create -i scorch $index_path --mapping index.json
@@ -26,6 +26,6 @@ time ~/workspace/repositories/go/bin/bleve create -i scorch $index_path --mappin
 #index the json files
 ~/workspace/repositories/go/bin/bleve index $index_path "$json_files_dir"
 
-# ~/workspace/repositories/go/bin/bleve query /home/claudius/workspace/repositories/go/src/solirom.ro/solirom/solirom-admin-backend/indexes/citada/ "a:nistor*"
+# ~/workspace/repositories/go/bin/bleve query ~/workspace/repositories/go/src/solirom.ro/solirom/solirom-admin-backend/indexes/citada/ "a:anapuiulet*"
 
 # curl -v -X POST localhost:7007/api/search/citada -d '{"size": 2000, "from": 0, "query": {"query": "title:etno*"}, "fields": ["collection", "title"]}'

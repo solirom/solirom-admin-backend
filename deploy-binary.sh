@@ -1,9 +1,13 @@
 
 #!/bin/bash
 
-service_name=solirom-admin-backend
-credentials=claudius@188.212.37.221
-target_dir=/home/angel/$service_name/
+service_name=${PWD##*/}
+
+credentials=claudius@85.186.121.41
+target_dir=/home/claudius/services/$service_name/
+
+rm ${service_name}
+go build -tags netgo -a -v
 
 # stop the service
 ssh -t $credentials sudo systemctl stop $service_name

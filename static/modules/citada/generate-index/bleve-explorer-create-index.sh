@@ -16,14 +16,14 @@ rm -rf "$json_files_dir"
 mkdir "$json_files_dir"
 
 # generate the json files for indexes
-time java -jar ~/workspace/repositories/git/solirom-xquery-service/bin/saxon9he.jar -s:"./input/" -xsl:"generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir/"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir/"
 
-curl -X DELETE http://188.212.37.221:8095/api/$index_name
-curl -X PUT http://188.212.37.221:8095/api/$index_name -d @"index.json"
+curl -X DELETE https://bleve-explorer.solirom.ro/api/$index_name
+curl -X PUT https://bleve-explorer.solirom.ro/api/$index_name -d @"index.json"
 
 cd "$current_dir"
 time for file_name in "$json_files_dir"/*.json
 do
     base_name=$(basename "$file_name" | cut -d. -f1)
-    curl -f -X PUT http://188.212.37.221:8095/api/$index_name/$base_name -d @$file_name
+    curl -f -X PUT https://bleve-explorer.solirom.ro/api/$index_name/$base_name -d @$file_name
 done

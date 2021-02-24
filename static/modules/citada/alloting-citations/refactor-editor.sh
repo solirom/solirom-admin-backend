@@ -11,7 +11,7 @@ rm -rf "$xml_files_dir"
 mkdir -p "$xml_files_dir"
 
 # refactor the citations
-time java -jar ~/workspace/repositories/git/solirom-xquery-service/bin/saxon9he.jar -s:"./input/" -xsl:"refactor-editor.xsl" -o:"$xml_files_dir"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"refactor-editor.xsl" -o:"$xml_files_dir"
 
 
 

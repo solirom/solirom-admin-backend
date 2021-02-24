@@ -20,10 +20,10 @@ rm -rf "$output_xml_files_dir" "$json_files_dir"
 mkdir -p "$output_xml_files_dir" "$json_files_dir"
 
 # allot the citations
-time java -jar ~/workspace/repositories/git/solirom-xquery-service/bin/saxon9he.jar -s:"./input/" -xsl:"alloting-citations.xsl" redactorId=$1 numberOfEntries=$2 inputCollection="$xml_files_dir" -o:"$output_xml_files_dir"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"alloting-citations.xsl" redactorId=$1 numberOfEntries=$2 inputCollection="$xml_files_dir" -o:"$output_xml_files_dir"
 
 # generate the index files
-time java -jar ~/workspace/repositories/git/solirom-xquery-service/bin/saxon9he.jar -s:"./input/" -xsl:"../generate-index/generate-index.xsl" inputCollection="$output_xml_files_dir" -o:"$json_files_dir"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"../generate-index/generate-index.xsl" inputCollection="$output_xml_files_dir" -o:"$json_files_dir"
 
 # change owner of data folder
 ssh -t $credentials sudo chown -R claudius:claudius "$remote_target_dir"
@@ -42,7 +42,7 @@ cd "$json_files_dir"
 for file_name in  *.json
 do
     base_name=$(basename "$file_name" | cut -d. -f1)
-    curl -f -X PUT http://188.212.37.221:8095/api/$index_name/$base_name -d @$file_name --fail --silent --show-error
+    curl -f -X PUT https://bleve-explorer.solirom.ro/api/$index_name/$base_name -d @$file_name --fail --silent --show-error
 done
 
 # ./alloting-citations.sh "nicoletapinghireac" "120"

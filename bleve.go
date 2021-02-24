@@ -21,7 +21,7 @@ import (
 )
 
 const indexDir = "indexes"
-const gitBaseUrl = "http://188.212.37.221:3000/api/v1/repos/%s?access_token=a6ddbb24ea29bee69670815cd4aca6b6703940cc"
+const gitBaseUrl = "https://git-is.solirom.ro/api/v1/repos/%s?access_token=b898798ba685f7baa7a06ce30da4e2672b415d80"
 const indexBaseUrl = "http://localhost:7007/api/index/%s/%s"
 
 var (
@@ -250,6 +250,7 @@ func newNetClient() *http.Client {
 }
 
 // curl localhost:7007/api/search/bflr -d '{"size": 2000, "from": 0, "query": {"query": "title:etno*"}, "fields": ["collection", "title", "filePath"]}'
+// curl localhost:7007/api/search/citada -d '{"size": 2000, "from": 0, "query": {"query": "a:anapuiulet*"}, "fields": ["*"]}'
 //
 // curl -X GET localhost:7007/api/data/solirom%2Fbflr-data%2Fcontents%2FA105157.xml
 // curl -X POST -H 'X-Username: claudius.teodorescu@gmail.com' -H 'Content-Type: text/plain;charset=UTF-8' localhost:7007/api/data/solirom%2Fbflr-data%2Fcontents%2Fa.xml -d '<test />'
