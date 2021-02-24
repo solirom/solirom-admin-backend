@@ -16,7 +16,7 @@ rm -rf "$json_files_dir"
 mkdir "$json_files_dir"
 
 # generate the json files for indexes
-time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir/"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"/home/claudius/workspace/repositories/git/solirom-admin-site/modules/citations/generate-index/generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir/"
 
 curl -X DELETE https://bleve-explorer.solirom.ro/api/$index_name
 curl -X PUT https://bleve-explorer.solirom.ro/api/$index_name -d @"index.json"

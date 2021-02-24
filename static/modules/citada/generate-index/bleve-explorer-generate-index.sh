@@ -13,7 +13,7 @@ git pull
 rm -rf "$json_files_dir"
 mkdir "$json_files_dir"
 
-time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir/"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"/home/claudius/workspace/repositories/git/solirom-admin-site/modules/citations/generate-index/generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir/"
 
 cd "$current_dir"
 time for file_name in "$json_files_dir"/*.json
