@@ -249,14 +249,13 @@ func newNetClient() *http.Client {
 	return netClient
 }
 
-// curl localhost:7007/api/search/bflr -d '{"size": 2000, "from": 0, "query": {"query": "title:etno*"}, "fields": ["collection", "title", "filePath"]}'
 // curl localhost:7007/api/search/citada -d '{"size": 2000, "from": 0, "query": {"query": "a:anapuiulet*"}, "fields": ["*"]}'
 //
 // curl -X GET localhost:7007/api/data/solirom%2Fbflr-data%2Fcontents%2FA105157.xml
 // curl -X POST -H 'X-Username: claudius.teodorescu@gmail.com' -H 'Content-Type: text/plain;charset=UTF-8' localhost:7007/api/data/solirom%2Fbflr-data%2Fcontents%2Fa.xml -d '<test />'
 // curl -X DELETE -H 'X-Username: claudius.teodorescu@gmail.com' localhost:7007/api/data/solirom%2Fbflr-data%2Fcontents%2FA969416.xml
 //
-// curl -X PUT -H 'Content-Type: text/plain;charset=UTF-8' localhost:7007/api/index/bflr/a -d '{"collection":"CLRE","title":"Dicionariu%20rom%C3%A2no-frances"}'
+// curl -X PUT -H 'Content-Type: text/plain;charset=UTF-8' localhost:7007/api/index/bflr/uuid-3d647c75-be6e-49cd-90ac-e06e39977abb -d '{"collection":"CLRE","title":"Dicionariu%20rom%C3%A2no-frances"}'
 // curl -X DELETE localhost:7007/api/index/bflr/a
 //
 // curl http://localhost:3000/api/v1/repos/solirom/bflr-data/contents/A105157.xml?access_token=a6ddbb24ea29bee69670815cd4aca6b6703940cc

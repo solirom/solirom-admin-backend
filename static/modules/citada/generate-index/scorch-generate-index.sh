@@ -4,12 +4,13 @@
 index_name="citada"
 current_dir=$(pwd)
 echo $current_dir
+citations_dir=/home/claudius/workspace/repositories/git/github.com/solirom/citada-data/
 output_dir=$current_dir/../../../../tmp/$index_name/generate-index/
-xml_files_dir=~/workspace/repositories/git/citada-data/
 json_files_dir=${output_dir}json/
 index_path=$current_dir/../../../../indexes/$index_name
+xslt_file_path=/home/claudius/workspace/repositories/git/gitlab.com/solirom-citada/admin-site/edit/generate-index/generate-index.xsl
 
-cd $xml_files_dir
+cd $citations_dir
 git pull
 
 cd $current_dir
@@ -18,7 +19,7 @@ rm -rf "$json_files_dir" $index_path
 mkdir -p "$json_files_dir"
 
 # generate the json files for indexes
-time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"/home/claudius/workspace/repositories/git/solirom-admin-site/modules/citations/generate-index/generate-index.xsl" inputCollection="$xml_files_dir" -o:"$json_files_dir"
+time java -jar ~/workspace/software/saxon-he/saxon-he.jar -s:"./input/" -xsl:"$xslt_file_path" inputCollection="$citations_dir" -o:"$json_files_dir"
 
 # create the index files
 time ~/workspace/repositories/go/bin/bleve create -i scorch $index_path --mapping index.json
